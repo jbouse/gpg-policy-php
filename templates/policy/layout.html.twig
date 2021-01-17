@@ -1,0 +1,28 @@
+{# templates/policy/base.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}GNU Privacy Guard Key Policy{% endblock %}
+
+{% block stylesheets %}
+<link href="{{ asset('assets/gpg-policy.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/gnupg-icon.png')}}" type="image/png" rel="icon" />
+{% endblock %}
+
+{% block javascripts %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ ga_tracking }}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments)};
+            gtag('js', new Date());
+            gtag('config', '{{ ga_tracking }}');
+        </script>
+{% endblock %}
+
+{% block body %}
+{% block content -%}
+    <div class="error bad">
+        <h1>Not a valid GNU Privacy Guard Policy URL</h1>
+    </div>
+{% endblock -%}
+{{ include('policy/_footer.html.twig') }}
+{% endblock %}

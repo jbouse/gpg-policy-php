@@ -1,2 +1,9 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
+    globals:
+        ga_tracking: 'UA-2819624-1'
+        gpg_app_title: 'GnuPG Key Policy Manager'
+        gpg_app_version: '0.9.0'
+        gpg_copy_author: 'Jeremy T. Bouse'
+        gpg_copy_year: '2009'
+        gpg_copy_holder: 'UnderGrid Network Services'

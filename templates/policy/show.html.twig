@@ -1,0 +1,9 @@
+{# templates/policy/show.html.twig #}
+{% extends 'policy/layout.html.twig' -%}
+{% block content %}
+    <div class="wrapper">
+{{ include('policy/_checksums.html.twig') }}
+{{ include('policy/_policy.html.twig') }}
+    </div>
+{{ include('policy/_download.html.twig') }}
+{% endblock %}

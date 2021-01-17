@@ -1,0 +1,7 @@
+{% for label, messages in app.flashes(['success', 'good', 'warning', 'bad']) -%}
+    {%- for message in messages %}
+            <div class="chksum {{ label }}">
+                {{ message }}
+            </div>
+    {%- endfor %}
+{% endfor -%}

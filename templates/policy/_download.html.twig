@@ -1,0 +1,9 @@
+    <div class="download">
+        <h3>Related links</h3>
+        <ul>
+            <li><a href="{{ path('gpg_policy_download', {policyId: policyId}) }}">Raw policy file</a></li>
+{% for sig in signatures %}
+            <li><a href="{{ path('gpg_signature_download', {policyId: policyId, keyId: sig}) }}">0x{{ sig }} sig</a></li>
+{% endfor %}
+        </ul>
+    </div>
