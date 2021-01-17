@@ -7,3 +7,4 @@ twig:
         gpg_copy_author: 'Jeremy T. Bouse'
         gpg_copy_year: '2009'
         gpg_copy_holder: 'UnderGrid Network Services'
+        gpg_policy_owner: '%env(POLICY_OWNER)%'

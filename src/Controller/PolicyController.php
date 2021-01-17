@@ -12,15 +12,18 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/gpg", name="gpg_")
+ * @Route("/legal/gpg", name="gpg_")
  */
 class PolicyController extends AbstractController
 {
     protected function get_current(): int
     {
+        $dataDir = $this->getParameter('app.data_dir');
+        $prefix = $this->getParameter('app.policy_prefix');
+
         $finder = new Finder();
         $finder->files()
-                ->in('/opt/data') // TODO: Need to parameterize data path
+                ->in($dataDir)
                 ->name('current')
                 ->depth('== 0');
         
@@ -30,11 +33,10 @@ class PolicyController extends AbstractController
             }
         }
 
-        // TODO: Need to paramaterize policy prefix
-        $pattern = join('\.', array('jbouse', '([0-9]{8})'));
+        $pattern = join('\.', array($prefix, '([0-9]{8})'));
         $finder = new Finder();
         $finder->files()
-                ->in('/opt/data') // TODO: Need to parameterize data path
+                ->in($dataDir)
                 ->name('/^' . $pattern . '$/')
                 ->sortByName(true)
                 ->depth('== 0')
@@ -50,11 +52,13 @@ class PolicyController extends AbstractController
 
     protected function get_policy(int $policyId): object
     {
-        // TODO: Need to paramaterize policy prefix
-        $pattern = join('\.', array('jbouse', $policyId));
+        $dataDir = $this->getParameter('app.data_dir');
+        $prefix = $this->getParameter('app.policy_prefix');
+
+        $pattern = join('\.', array($prefix, $policyId));
         $finder = new Finder();
         $finder->files()
-                ->in('/opt/data') // TODO: Need to parameterize data path
+                ->in($dataDir)
                 ->name('/^' . $pattern . '$/')
                 ->depth('== 0');
         
@@ -63,15 +67,19 @@ class PolicyController extends AbstractController
                 return $current;
             }
         }
+
+        throw $this->createNotFoundException('Not a valid GNU Privacy Guard Policy');
     }
 
     protected function get_signature(int $policyId, string $keyId): object
     {
-        // TODO: Need to paramaterize policy prefix
-        $pattern = join('\.', array('jbouse', $policyId, $keyId, 'sig'));
+        $dataDir = $this->getParameter('app.data_dir');
+        $prefix = $this->getParameter('app.policy_prefix');
+
+        $pattern = join('\.', array($prefix, $policyId, $keyId, 'sig'));
         $finder = new Finder();
         $finder->files()
-                ->in('/opt/data') // TODO: Need to parameterize data path
+                ->in($dataDir)
                 ->name('/^' . $pattern . '$/')
                 ->depth('== 0');
         
@@ -80,28 +88,33 @@ class PolicyController extends AbstractController
                 return $current;
             }
         }
+
+        throw $this->createNotFoundException('Not a valid GNU Privacy Guard Policy Signature');
     }
 
     protected function get_signatures(int $policyId): array
     {
+        $dataDir = $this->getParameter('app.data_dir');
+        $prefix = $this->getParameter('app.policy_prefix');
+        $signatures = [];
+
         $finder = new Finder();
         $finder->files()
-                ->in('/opt/data') // TODO: Need to parameterize data path
-                ->name('jbouse.' . $policyId . '*.sig') // TODO: Need to paramaterize policy prefix
+                ->in($dataDir)
+                ->name($prefix . '.' . $policyId . '*.sig')
                 ->depth('== 0')
                 ->sortByName();
         
         if ($finder->hasResults()) {
-            $signatures = [];
-            // TODO: Need to paramaterize policy prefix
-            $pattern = join('\.', array('jbouse', $policyId, '([0-9A-Fa-f]{8})', 'sig'));
+            $pattern = join('\.', array($prefix, $policyId, '([0-9A-Fa-f]{8})', 'sig'));
             foreach ($finder as $current) {
                 if(preg_match('/^'.$pattern.'$/', $current->getRelativePathname(), $matches)) {
                     $signatures[] = $matches[1];
                 }
             }
-            return $signatures;
         }
+
+        return $signatures;
     }
 
     protected function validate_checksum(int $policyId, string $checksum, string $algo): void

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "998aa8ddb740fb153764f7b1a26fa149",
+    "content-hash": "4b10d7023c301b6f4050c4af18a2c72b",
     "packages": [
         {
             "name": "async-aws/core",
@@ -126,16 +126,16 @@
         },
         {
             "name": "bref/bref",
-            "version": "1.1.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "f813801fa16810d52099facacd08be1b68d2e999"
+                "reference": "1e3dc380ebc682d27d91d209c0c418fff01b32de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/f813801fa16810d52099facacd08be1b68d2e999",
-                "reference": "f813801fa16810d52099facacd08be1b68d2e999",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/1e3dc380ebc682d27d91d209c0c418fff01b32de",
+                "reference": "1e3dc380ebc682d27d91d209c0c418fff01b32de",
                 "shasum": ""
             },
             "require": {
@@ -194,7 +194,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-01-15T14:28:25+00:00"
+            "time": "2020-11-30T15:56:20+00:00"
         },
         {
             "name": "composer/package-versions-deprecated",
@@ -8404,7 +8404,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,

@@ -1,7 +1,7 @@
 {# templates/policy/base.html.twig #}
 {% extends 'base.html.twig' %}
 
-{% block title %}GNU Privacy Guard Key Policy{% endblock %}
+{% block title %}{{ gpg_policy_owner }} GNU Privacy Guard Key Policy{% endblock %}
 
 {% block stylesheets %}
 <link href="{{ asset('assets/gpg-policy.css')}}" rel="stylesheet" type="text/css" />
@@ -19,10 +19,6 @@
 {% endblock %}
 
 {% block body %}
-{% block content -%}
-    <div class="error bad">
-        <h1>Not a valid GNU Privacy Guard Policy URL</h1>
-    </div>
-{% endblock -%}
+{% block content %}{% endblock %}
 {{ include('policy/_footer.html.twig') }}
 {% endblock %}

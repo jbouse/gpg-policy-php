@@ -1,0 +1,32 @@
+service: gpg-policy
+
+provider:
+    name: aws
+    region: us-east-1
+    runtime: provided.al2
+    environment:
+        APP_ENV: prod
+        DATA_DIR: /opt/data
+        POLICY_PREFIX: jbouse
+        POLICY_OWNER: 'Jeremy T. Bouse'
+
+plugins:
+    - ./vendor/bref/bref
+
+functions:
+    website:
+        handler: public/index.php
+        description: ''
+        timeout: 28 # in seconds (API Gateway has a timeout of 29 seconds)
+        layers:
+            - ${bref:layer.php-80-fpm}
+            - ${cf:gpg-policy-data-dev.DataLayerExport}
+        events:
+            -   httpApi: '*'
+
+package:
+    exclude:
+        - 'node_modules/**'
+        - 'tests/**'
+        - 'var/**'
+        - '*.local'
