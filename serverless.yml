@@ -16,7 +16,8 @@ plugins:
 functions:
     website:
         handler: public/index.php
-        description: ''
+        description: 'GNU Privacy Guard Policy Manager'
+        memorySize: 1024
         timeout: 28 # in seconds (API Gateway has a timeout of 29 seconds)
         layers:
             - ${bref:layer.php-80-fpm}
