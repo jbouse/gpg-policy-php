@@ -49,22 +49,20 @@ phases:
     #discard-paths: yes
     #file-format: JunitXml | CucumberJson
 artifacts:
-  files:
-    - '.env'
-    - 'bin/**/*'
-    - 'composer.*'
-    - 'config/**/*'
-    - 'migrations/**/*'
-    - 'public/**/*'
-    - 'src/**/*'
-    - 'templates/**/*'
-    - 'translations/**/*'
-    - 'var/**/*'
-    - 'vendor/**/*'
-  name: $(date +%Y-%m-%d)
-  #discard-paths: yes
-  #base-directory: location
   secondary-artifacts:
+    BuildArtifact:
+      files:
+        - '.env'
+        - 'bin/**/*'
+        - 'composer.*'
+        - 'config/**/*'
+        - 'migrations/**/*'
+        - 'public/**/*'
+        - 'src/**/*'
+        - 'templates/**/*'
+        - 'translations/**/*'
+        - 'var/**/*'
+        - 'vendor/**/*'
     AssetsArtifact:
       files:
         - 'assets/**/*'
