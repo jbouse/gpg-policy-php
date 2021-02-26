@@ -64,6 +64,12 @@ artifacts:
   name: $(date +%Y-%m-%d)
   #discard-paths: yes
   #base-directory: location
+  secondary-artifacts:
+    AssetsArtifact:
+      files:
+        - 'assets/**/*'
+      base-directory: public
+      discard-paths: yes
 #cache:
   #paths:
     # - paths
