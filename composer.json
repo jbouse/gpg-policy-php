@@ -1,7 +1,6 @@
 {
     "name": "jbouse/gpg-policy",
     "description": "GNU Privacy Guard Key Usage Policy Manager",
-    "version": "0.9.0",
     "type": "project",
     "license": "proprietary",
     "authors": [
