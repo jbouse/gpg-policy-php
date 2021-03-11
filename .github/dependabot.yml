@@ -18,6 +18,7 @@ updates:
     schedule:
       interval: "daily"
     versioning-strategy: increase-if-necessary
+    open-pull-requests-limit: 10
     reviewers:
       - jbouse
     pull-request-branch-name:
