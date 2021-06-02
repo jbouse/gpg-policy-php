@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e5b76074f3f4e4db19d7aeea8ca8354",
+    "content-hash": "4339e7a98d8d944ce8c1299541c11ce2",
     "packages": [
         {
             "name": "async-aws/core",
@@ -6229,16 +6229,16 @@
         },
         {
             "name": "symfony/property-access",
-            "version": "v5.2.4",
+            "version": "v5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/property-access.git",
-                "reference": "3af8ed262bd3217512a13b023981fe68f36ad5f3"
+                "reference": "8988399a556cffb0fba9bb3603f8d1ba4543eceb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/property-access/zipball/3af8ed262bd3217512a13b023981fe68f36ad5f3",
-                "reference": "3af8ed262bd3217512a13b023981fe68f36ad5f3",
+                "url": "https://api.github.com/repos/symfony/property-access/zipball/8988399a556cffb0fba9bb3603f8d1ba4543eceb",
+                "reference": "8988399a556cffb0fba9bb3603f8d1ba4543eceb",
                 "shasum": ""
             },
             "require": {
@@ -6290,7 +6290,7 @@
                 "reflection"
             ],
             "support": {
-                "source": "https://github.com/symfony/property-access/tree/v5.2.4"
+                "source": "https://github.com/symfony/property-access/tree/v5.3.0"
             },
             "funding": [
                 {
@@ -6306,20 +6306,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-27T10:15:41+00:00"
+            "time": "2021-05-26T17:43:10+00:00"
         },
         {
             "name": "symfony/property-info",
-            "version": "v5.2.8",
+            "version": "v5.2.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/property-info.git",
-                "reference": "cc8121baf91039648d5f8feb894dc4a9d4935cc0"
+                "reference": "3e96404cea2f41ea65493da526245c2b4b5ebf4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/property-info/zipball/cc8121baf91039648d5f8feb894dc4a9d4935cc0",
-                "reference": "cc8121baf91039648d5f8feb894dc4a9d4935cc0",
+                "url": "https://api.github.com/repos/symfony/property-info/zipball/3e96404cea2f41ea65493da526245c2b4b5ebf4e",
+                "reference": "3e96404cea2f41ea65493da526245c2b4b5ebf4e",
                 "shasum": ""
             },
             "require": {
@@ -6380,7 +6380,7 @@
                 "validator"
             ],
             "support": {
-                "source": "https://github.com/symfony/property-info/tree/v5.2.8"
+                "source": "https://github.com/symfony/property-info/tree/v5.2.10"
             },
             "funding": [
                 {
@@ -6396,7 +6396,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-07T14:04:56+00:00"
+            "time": "2021-05-26T17:40:38+00:00"
         },
         {
             "name": "symfony/proxy-manager-bridge",
