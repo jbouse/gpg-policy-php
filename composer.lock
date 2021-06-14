@@ -132,16 +132,16 @@
         },
         {
             "name": "bref/bref",
-            "version": "1.2.6",
+            "version": "1.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "a2827ef472ca2d4ee71ae41bf856b536baa13953"
+                "reference": "71f8821088532d46ad61afde17fa1260a61ec450"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/a2827ef472ca2d4ee71ae41bf856b536baa13953",
-                "reference": "a2827ef472ca2d4ee71ae41bf856b536baa13953",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/71f8821088532d46ad61afde17fa1260a61ec450",
+                "reference": "71f8821088532d46ad61afde17fa1260a61ec450",
                 "shasum": ""
             },
             "require": {
@@ -192,7 +192,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
-                "source": "https://github.com/brefphp/bref/tree/1.2.6"
+                "source": "https://github.com/brefphp/bref/tree/1.2.7"
             },
             "funding": [
                 {
@@ -204,7 +204,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-05-11T08:05:48+00:00"
+            "time": "2021-06-11T13:08:54+00:00"
         },
         {
             "name": "composer/package-versions-deprecated",
@@ -9049,5 +9049,5 @@
         "ext-iconv": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
