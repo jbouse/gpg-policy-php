@@ -2,7 +2,7 @@
 framework:
     secret: '%env(APP_SECRET)%'
     #csrf_protection: true
-    http_method_override: false
+    #http_method_override: true
     # the IP address (or range) of your proxy
     trusted_proxies: '%env(TRUSTED_PROXIES)%'
     # trust *all* "X-Forwarded-*" headers
