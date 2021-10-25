@@ -12,7 +12,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/legal/gpg", name="gpg_")
+ * @Route("/", name="gpg_")
  */
 class PolicyController extends AbstractController
 {
