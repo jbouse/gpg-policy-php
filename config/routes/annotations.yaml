@@ -3,6 +3,8 @@ controllers:
     type: annotation
     prefix: '/legal/gpg'
     # trailing_slash_on_root: false
+    defaults:
+        schemes: [https]
 
 kernel:
     resource: ../../src/Kernel.php
