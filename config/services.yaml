@@ -6,6 +6,8 @@
 parameters:
     app.data_dir: '%env(DATA_DIR)%'
     app.policy_prefix: '%env(POLICY_PREFIX)%'
+    router.request_context.scheme: 'https'
+    asset.request_context.secure: true   
 
 services:
     # default configuration for services in *this* file
