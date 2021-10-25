@@ -15,10 +15,12 @@ artifacts:
         - src/**/*
         - templates/**/*
         - translations/**/*
-        - var/**/*
         - vendor/**/*
         - .env
         - composer.json
+        - composer.lock
+        - symfony.lock
+        - phpunit.xml.dist
     AssetsArtifact:
       files:
         - 'assets/**/*'
