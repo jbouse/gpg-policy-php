@@ -2,6 +2,7 @@ controllers:
     resource: ../../src/Controller/
     type: annotation
     prefix: '/legal/gpg'
+    trailing_slash_on_root: false
 
 kernel:
     resource: ../../src/Kernel.php
