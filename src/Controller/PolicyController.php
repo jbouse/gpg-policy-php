@@ -138,7 +138,6 @@ class PolicyController extends AbstractController
      */
     public function index(): Response
     {
-        // return $this->redirectToRoute('gpg_policy_show', ['policyId' => $this->get_current()]);
         $url = $this->generateUrl('gpg_policy_show', ['policyId' => $this->get_current()]);
 
         return new RedirectResponse($url);
@@ -185,7 +184,6 @@ class PolicyController extends AbstractController
     {
         $this->validate_checksum($policyId, $checksum, 'md5');
 
-        // return $this->redirectToRoute('gpg_policy_show', ['policyId' => $policyId]);
         $url = $this->generatgeUrl('gpg_policy_show', ['policyId' => $policyId]);
 
         return new RedirectResponse($url);
@@ -198,7 +196,6 @@ class PolicyController extends AbstractController
     {
         $this->validate_checksum($policyId, $checksum, 'sha1');
 
-        // return $this->redirectToRoute('gpg_policy_show', ['policyId' => $policyId]);
         $url = $this->generateUrl('gpg_policy_show', ['policyId' => $policyId]);
 
         return new RedirectResponse($url);
@@ -211,7 +208,6 @@ class PolicyController extends AbstractController
     {
         $this->validate_checksum($policyId, $checksum, 'sha256');
 
-        // return $this->redirectToRoute('gpg_policy_show', ['policyId' => $policyId]);
         $url = $this->generateUrl('gpg_policy_show', ['policyId' => $policyId]);
 
         return new RedirectResponse($url);
