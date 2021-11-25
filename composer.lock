@@ -126,16 +126,16 @@
         },
         {
             "name": "bref/bref",
-            "version": "1.3.6",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "3826010c8df1d3c70a3cdc968dd2bd796e6aa9d4"
+                "reference": "1a8d052954ae25f64c619330d24b19cd7d9584da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/3826010c8df1d3c70a3cdc968dd2bd796e6aa9d4",
-                "reference": "3826010c8df1d3c70a3cdc968dd2bd796e6aa9d4",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/1a8d052954ae25f64c619330d24b19cd7d9584da",
+                "reference": "1a8d052954ae25f64c619330d24b19cd7d9584da",
                 "shasum": ""
             },
             "require": {
@@ -196,7 +196,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-11-19T16:34:22+00:00"
+            "time": "2021-11-25T20:43:01+00:00"
         },
         {
             "name": "composer/package-versions-deprecated",
