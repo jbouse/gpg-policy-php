@@ -28,4 +28,4 @@ updates:
       - "dependencies"
     ignore:
       - dependency-name: "symfony/*"
-        update-types: ["version-update:semvar-major"]
+        update-types: ["version-update:semver-major"]
