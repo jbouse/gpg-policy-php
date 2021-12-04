@@ -17,7 +17,7 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    versioning-strategy: widen
+    versioning-strategy: lockfile-only
     open-pull-requests-limit: 10
     reviewers:
       - jbouse
@@ -26,6 +26,3 @@ updates:
     labels:
       - "composer"
       - "dependencies"
-    ignore:
-      - dependency-name: "symfony/*"
-        update-types: ["version-update:semver-major"]
