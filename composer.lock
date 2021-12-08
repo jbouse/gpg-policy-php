@@ -132,16 +132,16 @@
         },
         {
             "name": "bref/bref",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "1a8d052954ae25f64c619330d24b19cd7d9584da"
+                "reference": "c75867be52e65d3f54eec63c3c970956181d9bae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/1a8d052954ae25f64c619330d24b19cd7d9584da",
-                "reference": "1a8d052954ae25f64c619330d24b19cd7d9584da",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/c75867be52e65d3f54eec63c3c970956181d9bae",
+                "reference": "c75867be52e65d3f54eec63c3c970956181d9bae",
                 "shasum": ""
             },
             "require": {
@@ -156,10 +156,10 @@
                 "psr/http-message": "^1.0",
                 "psr/http-server-handler": "^1.0",
                 "riverline/multipart-parser": "^2.0.6",
-                "symfony/filesystem": "^3.1|^4.0|^5.0",
-                "symfony/http-client": "^4.4|^5.0",
-                "symfony/process": "^4.2|^5.0",
-                "symfony/yaml": "^3.1|^4.0|^5.0"
+                "symfony/filesystem": "^3.1|^4.0|^5.0|^6.0",
+                "symfony/http-client": "^4.4|^5.0|^6.0",
+                "symfony/process": "^4.2|^5.0|^6.0",
+                "symfony/yaml": "^3.1|^4.0|^5.0|^6.0"
             },
             "require-dev": {
                 "async-aws/core": "^1.0",
@@ -194,7 +194,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
-                "source": "https://github.com/brefphp/bref/tree/1.4.0"
+                "source": "https://github.com/brefphp/bref/tree/1.4.1"
             },
             "funding": [
                 {
@@ -206,7 +206,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-11-25T20:43:01+00:00"
+            "time": "2021-12-07T12:26:08+00:00"
         },
         {
             "name": "bref/symfony-bridge",
@@ -1856,16 +1856,16 @@
         },
         {
             "name": "hollodotme/fast-cgi-client",
-            "version": "v3.1.6",
+            "version": "v3.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hollodotme/fast-cgi-client.git",
-                "reference": "c8c79696cbe1f474c814b99bf48f54a85ad9f6f6"
+                "reference": "062182d4eda73c161cc2839783acc83096ec0f37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hollodotme/fast-cgi-client/zipball/c8c79696cbe1f474c814b99bf48f54a85ad9f6f6",
-                "reference": "c8c79696cbe1f474c814b99bf48f54a85ad9f6f6",
+                "url": "https://api.github.com/repos/hollodotme/fast-cgi-client/zipball/062182d4eda73c161cc2839783acc83096ec0f37",
+                "reference": "062182d4eda73c161cc2839783acc83096ec0f37",
                 "shasum": ""
             },
             "require": {
@@ -1900,9 +1900,9 @@
             ],
             "support": {
                 "issues": "https://github.com/hollodotme/fast-cgi-client/issues",
-                "source": "https://github.com/hollodotme/fast-cgi-client/tree/v3.1.6"
+                "source": "https://github.com/hollodotme/fast-cgi-client/tree/v3.1.7"
             },
-            "time": "2021-09-23T10:05:19+00:00"
+            "time": "2021-12-07T10:10:20+00:00"
         },
         {
             "name": "laminas/laminas-code",
