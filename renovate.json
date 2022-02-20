@@ -1,6 +1,7 @@
 {
   "extends": [
     "config:base",
+    ":preserveSemverRanges",
     "schedule:nonOfficeHours"
   ],
   "packageRules": [
@@ -10,7 +11,12 @@
     },
     {
       "matchDepTypes": ["devDependencies"],
+      "matchPackagePatterns": ["lint", "prettier"],
       "automerge": true
     }
-  ]
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
+  }
 }
