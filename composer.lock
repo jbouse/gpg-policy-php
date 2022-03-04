@@ -4801,16 +4801,16 @@
         },
         {
             "name": "symfony/intl",
-            "version": "v6.0.3",
+            "version": "v6.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/intl.git",
-                "reference": "eeddf6ca4cb4767e554c82182d1ddd5a7ff94f4d"
+                "reference": "aa9dd5a6b4b75a4b3dcd002ae588f9792f33defe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/intl/zipball/eeddf6ca4cb4767e554c82182d1ddd5a7ff94f4d",
-                "reference": "eeddf6ca4cb4767e554c82182d1ddd5a7ff94f4d",
+                "url": "https://api.github.com/repos/symfony/intl/zipball/aa9dd5a6b4b75a4b3dcd002ae588f9792f33defe",
+                "reference": "aa9dd5a6b4b75a4b3dcd002ae588f9792f33defe",
                 "shasum": ""
             },
             "require": {
@@ -4861,7 +4861,7 @@
                 "localization"
             ],
             "support": {
-                "source": "https://github.com/symfony/intl/tree/v6.0.3"
+                "source": "https://github.com/symfony/intl/tree/v6.0.5"
             },
             "funding": [
                 {
@@ -4877,7 +4877,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-02T09:55:41+00:00"
+            "time": "2022-02-27T08:47:28+00:00"
         },
         {
             "name": "symfony/mailer",
@@ -5414,7 +5414,7 @@
         },
         {
             "name": "symfony/polyfill-intl-grapheme",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-grapheme.git",
@@ -5475,7 +5475,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-grapheme/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-intl-grapheme/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -5669,7 +5669,7 @@
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
@@ -5733,7 +5733,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -5753,7 +5753,7 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -5816,7 +5816,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -6059,16 +6059,16 @@
         },
         {
             "name": "symfony/property-access",
-            "version": "v6.0.3",
+            "version": "v6.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/property-access.git",
-                "reference": "428ffd96c60bf2c13b35182f704b24db6712c897"
+                "reference": "e23f2c9a4f339c351546b12f29c8b122e2fc2f74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/property-access/zipball/428ffd96c60bf2c13b35182f704b24db6712c897",
-                "reference": "428ffd96c60bf2c13b35182f704b24db6712c897",
+                "url": "https://api.github.com/repos/symfony/property-access/zipball/e23f2c9a4f339c351546b12f29c8b122e2fc2f74",
+                "reference": "e23f2c9a4f339c351546b12f29c8b122e2fc2f74",
                 "shasum": ""
             },
             "require": {
@@ -6118,7 +6118,7 @@
                 "reflection"
             ],
             "support": {
-                "source": "https://github.com/symfony/property-access/tree/v6.0.3"
+                "source": "https://github.com/symfony/property-access/tree/v6.0.5"
             },
             "funding": [
                 {
@@ -6134,7 +6134,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-12T18:59:56+00:00"
+            "time": "2022-02-04T19:03:38+00:00"
         },
         {
             "name": "symfony/property-info",
