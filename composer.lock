@@ -4,174 +4,49 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0d04495c452bf01b0cfa8750abfc1503",
+    "content-hash": "d7c0203a838ed1d316fcecaa407762d1",
     "packages": [
         {
-            "name": "async-aws/core",
-            "version": "1.18.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/async-aws/core.git",
-                "reference": "fd09655f15b8b2d16799ec46a792dcdbb4e460fb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/async-aws/core/zipball/fd09655f15b8b2d16799ec46a792dcdbb4e460fb",
-                "reference": "fd09655f15b8b2d16799ec46a792dcdbb4e460fb",
-                "shasum": ""
-            },
-            "require": {
-                "ext-hash": "*",
-                "ext-json": "*",
-                "ext-simplexml": "*",
-                "php": "^7.2.5 || ^8.0",
-                "psr/cache": "^1.0 || ^2.0 || ^3.0",
-                "psr/log": "^1.0 || ^2.0 || ^3.0",
-                "symfony/deprecation-contracts": "^2.1 || ^3.0",
-                "symfony/http-client": "^4.4.16 || ^5.1.7,!=5.2.0 || ^6.0",
-                "symfony/http-client-contracts": "^1.1.8 || ^2.0 || ^3.0",
-                "symfony/service-contracts": "^1.0 || ^2.0 || ^3.0"
-            },
-            "conflict": {
-                "async-aws/s3": "<1.1"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.19-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "AsyncAws\\Core\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Core package to integrate with AWS. This is a lightweight AWS SDK provider by AsyncAws.",
-            "keywords": [
-                "amazon",
-                "async-aws",
-                "aws",
-                "sdk",
-                "sts"
-            ],
-            "support": {
-                "source": "https://github.com/async-aws/core/tree/1.18.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/jderusse",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/nyholm",
-                    "type": "github"
-                }
-            ],
-            "time": "2023-02-28T16:31:16+00:00"
-        },
-        {
-            "name": "async-aws/lambda",
-            "version": "1.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/async-aws/lambda.git",
-                "reference": "dfb4fcb37f16e9f9a4d2a48e8801ec35fe951e3d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/async-aws/lambda/zipball/dfb4fcb37f16e9f9a4d2a48e8801ec35fe951e3d",
-                "reference": "dfb4fcb37f16e9f9a4d2a48e8801ec35fe951e3d",
-                "shasum": ""
-            },
-            "require": {
-                "async-aws/core": "^1.9",
-                "ext-json": "*",
-                "php": "^7.2.5 || ^8.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.8-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "AsyncAws\\Lambda\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Lambda client, part of the AWS SDK provided by AsyncAws.",
-            "keywords": [
-                "amazon",
-                "async-aws",
-                "aws",
-                "lambda",
-                "sdk"
-            ],
-            "support": {
-                "source": "https://github.com/async-aws/lambda/tree/1.8.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/jderusse",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/nyholm",
-                    "type": "github"
-                }
-            ],
-            "time": "2022-11-30T08:14:25+00:00"
-        },
-        {
             "name": "bref/bref",
-            "version": "1.7.24",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "064ee2ca912817d677b7948a300e29749da58891"
+                "reference": "e04eb8d3aa095e47fd4dc962e9b186122587d261"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/064ee2ca912817d677b7948a300e29749da58891",
-                "reference": "064ee2ca912817d677b7948a300e29749da58891",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/e04eb8d3aa095e47fd4dc962e9b186122587d261",
+                "reference": "e04eb8d3aa095e47fd4dc962e9b186122587d261",
                 "shasum": ""
             },
             "require": {
-                "async-aws/lambda": "^1.0",
                 "ext-curl": "*",
                 "ext-json": "*",
-                "hollodotme/fast-cgi-client": "^3.0",
-                "nyholm/psr7": "^1.2",
-                "php": ">=7.3.0",
+                "hollodotme/fast-cgi-client": "^3.0.1",
+                "nyholm/psr7": "^1.4.1",
+                "php": ">=8.0",
                 "psr/container": "^1.0|^2.0",
                 "psr/http-message": "^1.0",
                 "psr/http-server-handler": "^1.0",
                 "riverline/multipart-parser": "^2.0.6",
-                "symfony/console": "^3.0|^4.0|^5.0|^6.0",
-                "symfony/filesystem": "^3.1|^4.0|^5.0|^6.0",
-                "symfony/http-client": "^4.4|^5.0|^6.0",
-                "symfony/process": "^4.2|^5.0|^6.0",
-                "symfony/yaml": "^3.1|^4.0|^5.0|^6.0"
+                "symfony/process": "^4.4|^5.0|^6.0"
             },
             "require-dev": {
                 "async-aws/core": "^1.0",
+                "async-aws/lambda": "^1.0",
                 "aws/aws-sdk-php": "^3.172",
-                "dms/phpunit-arraysubset-asserts": "^0.2.0",
+                "bref/secrets-loader": "^1.0",
+                "dms/phpunit-arraysubset-asserts": "^0.4",
                 "doctrine/coding-standard": "^8.0",
-                "guzzlehttp/guzzle": "^6.3",
+                "guzzlehttp/guzzle": "^7.5",
                 "phpstan/phpstan": "^1.0",
-                "phpunit/phpunit": "^9.0"
+                "phpunit/phpunit": "^9.0",
+                "symfony/console": "^4.4|^5.0|^6.0"
             },
             "bin": [
-                "bref"
+                "bref",
+                "src/bref-local"
             ],
             "type": "project",
             "autoload": {
@@ -194,7 +69,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
-                "source": "https://github.com/brefphp/bref/tree/1.7.24"
+                "source": "https://github.com/brefphp/bref/tree/2.0.1"
             },
             "funding": [
                 {
@@ -206,7 +81,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-13T16:11:19+00:00"
+            "time": "2023-03-15T09:51:14+00:00"
         },
         {
             "name": "bref/symfony-bridge",
