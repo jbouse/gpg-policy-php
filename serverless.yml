@@ -1,17 +1,36 @@
 service: gpg-policy
 
+plugins:
+    - ./vendor/bref/bref
+
+custom:
+    efsAccessPoint: fsap-04be15fa8193513fa
+    LocalMountPath: /mnt/data
+    securityGroup: sg-0f1add0101223a1a1
+
 provider:
     name: aws
     region: us-east-1
     runtime: provided.al2
     environment:
         APP_ENV: prod
-        DATA_DIR: /opt/data
+        DATA_DIR: ${self:custom.LocalMountPath}
         POLICY_PREFIX: jbouse
         POLICY_OWNER: 'Jeremy T. Bouse'
+    iam:
+        role:
+            managedPolicies:
+                - arn:aws:iam::aws:policy/AmazonElasticFileSystemClientReadOnlyAccess
 
-plugins:
-    - ./vendor/bref/bref
+package:
+    patterns:
+        - '!node_modules/**'
+        - '!.vscode/**'
+        - '!.pytest_cache/**'
+        - '!__pycadche__/**'
+        - '!tests/**'
+        - "!var/**"
+        - '!*.local'
 
 functions:
     website:
@@ -20,14 +39,19 @@ functions:
         memorySize: 1024
         timeout: 28 # in seconds (API Gateway has a timeout of 29 seconds)
         layers:
-            - ${bref:layer.php-80-fpm}
-            - ${cf:gpg-policy-data-dev.DataLayerExport}
+            - ${bref:layer.php-83-fpm}
+        vpc:
+            securityGroupIds:
+                - ${self:custom.securityGroup}
+            subnetIds:
+                - subnet-0461db9cf1be1cc67
+                - subnet-02200213fe2e5874b
+                - subnet-00b7e0292352c818b
+                - subnet-08afc525ab17fb6cc
+                - subnet-0a47ca1b571466642
+                - subnet-0113a250fe8a3f8ce
+        fileSystemConfig:
+            arn: 'arn:aws:elasticfilesystem:${self:provider.region}:072105303426:access-point/${self:custom.efsAccessPoint}'
+            localMountPath: '${self:custom.LocalMountPath}'
         events:
             -   httpApi: '*'
-
-package:
-    exclude:
-        - 'node_modules/**'
-        - 'tests/**'
-        - 'var/**'
-        - '*.local'
