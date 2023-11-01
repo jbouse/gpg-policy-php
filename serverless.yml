@@ -40,6 +40,7 @@ functions:
         timeout: 28 # in seconds (API Gateway has a timeout of 29 seconds)
         layers:
             - ${bref:layer.php-83-fpm}
+            - arn:aws:lambda:us-east-1:580247275435:layer:LambdaInsightsExtension:38
         vpc:
             securityGroupIds:
                 - ${self:custom.securityGroup}
