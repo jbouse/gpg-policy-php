@@ -24,3 +24,34 @@ nelmio_security:
         policies:
             - 'no-referrer'
             - 'strict-origin-when-cross-origin'
+
+    csp:
+        enabled: true
+        compat_headers: false
+        hash:
+            algorithm: sha512
+        enforce:
+            browser_adaptive:
+                enabled: true
+            level1_fallback: true
+            report-uri: https://maftkc82.uriports.com/reports/report
+            default-src: 
+            - 'none'
+            base-uri:
+            - 'self'
+            font-src:
+            - 'self'
+            script-src:
+            - 'self'
+            - www.googletagmanager.com/gtag/
+            img-src:
+            - 'self'
+            - www.google-analytics.com/collect
+            connect-src:
+            - 'self'
+            - analytics.google.com/g/collect
+            - www.google-analytics.com/j/collect
+            - stats.g.doubleclick.net/j/collect
+            style-src:
+            - 'self'
+            block-all-mixed-content: true
