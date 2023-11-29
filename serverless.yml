@@ -23,17 +23,21 @@ provider:
         role:
             managedPolicies:
                 - arn:aws:iam::aws:policy/AmazonElasticFileSystemClientReadOnlyAccess
+    tracing:
+      lambda: true
 
 package:
+    excludeDevDependencies: true
     patterns:
         - '!node_modules/**'
         - '!.vscode/**'
-        - '!.pytest_cache/**'
-        - '!__pycadche__/**'
+        - '!.phpunit.result.cache/**'
         - '!tests/**'
         - "!var/**"
         - '!*.local'
-
+        - '!.github/'
+        - '!docker-*.yml'
+        - '!renovate.json'
 functions:
     website:
         handler: public/index.php
@@ -42,7 +46,7 @@ functions:
         timeout: 28 # in seconds (API Gateway has a timeout of 29 seconds)
         layers:
             - ${bref:layer.php-83-fpm}
-            - arn:aws:lambda:${self:provider.region}:580247275435:layer:LambdaInsightsExtension:38
+            - arn:aws:lambda:${aws:region}:580247275435:layer:LambdaInsightsExtension:38
         vpc:
             securityGroupIds:
                 - ${self:custom.securityGroup}
@@ -54,7 +58,7 @@ functions:
                 - subnet-0a47ca1b571466642
                 - subnet-0113a250fe8a3f8ce
         fileSystemConfig:
-            arn: 'arn:aws:elasticfilesystem:${self:provider.region}:072105303426:access-point/${self:custom.efsAccessPoint}'
+            arn: 'arn:aws:elasticfilesystem:${aws:region}:${aws:accountId}:access-point/${self:custom.efsAccessPoint}'
             localMountPath: '${self:custom.LocalMountPath}'
         events:
             -   httpApi: '*'
