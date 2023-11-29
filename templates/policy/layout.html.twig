@@ -9,13 +9,17 @@
 {% endblock %}
 
 {% block javascripts %}
+{% cspscript %}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ ga_tracking }}"></script>
+{% endcspscript %}
+{% cspscript %}
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments)};
             gtag('js', new Date());
             gtag('config', '{{ ga_tracking }}');
         </script>
+{% endcspscript %}
 {% endblock %}
 
 {% block body %}
