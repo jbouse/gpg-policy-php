@@ -1,14 +1,9 @@
 service: gpg-policy
 
-plugins:
-    - ./vendor/bref/bref
-
 custom:
     efsAccessPoint: fsap-04be15fa8193513fa
     LocalMountPath: /mnt/data
     securityGroup: sg-0f1add0101223a1a1
-
-useDotenv: true
 
 provider:
     name: aws
@@ -16,6 +11,7 @@ provider:
     runtime: provided.al2
     environment:
         APP_ENV: prod
+        # APP_DEBUG: true
         DATA_DIR: ${self:custom.LocalMountPath}
         POLICY_PREFIX: jbouse
         POLICY_OWNER: 'Jeremy T. Bouse'
@@ -23,30 +19,23 @@ provider:
         role:
             managedPolicies:
                 - arn:aws:iam::aws:policy/AmazonElasticFileSystemClientReadOnlyAccess
-    # tracing:
-    #   lambda: true
+    tracing:
+        lambda: true
 
-package:
-    excludeDevDependencies: true
-    patterns:
-        - '!node_modules/**'
-        - '!.vscode/**'
-        - '!.phpunit.result.cache/**'
-        - '!tests/**'
-        - "!var/**"
-        - '!*.local'
-        - '!.github/'
-        - '!docker-*.yml'
-        - '!renovate.json'
+plugins:
+    - ./vendor/bref/bref
+
 functions:
     website:
-        handler: public/index.php
         description: 'GNU Privacy Guard Policy Manager'
+        handler: public/index.php
         memorySize: 1024
         timeout: 28 # in seconds (API Gateway has a timeout of 29 seconds)
         layers:
             - ${bref:layer.php-83-fpm}
-            # - arn:aws:lambda:${aws:region}:580247275435:layer:LambdaInsightsExtension:38
+            - arn:aws:lambda:${aws:region}:580247275435:layer:LambdaInsightsExtension:38
+        events:
+            - httpApi: '*'
         vpc:
             securityGroupIds:
                 - ${self:custom.securityGroup}
@@ -60,5 +49,41 @@ functions:
         fileSystemConfig:
             arn: 'arn:aws:elasticfilesystem:${aws:region}:${aws:accountId}:access-point/${self:custom.efsAccessPoint}'
             localMountPath: '${self:custom.LocalMountPath}'
-        events:
-            -   httpApi: '*'
+    console:
+        description: 'GNU Privacy Guard Policy Manager - Console'
+        handler: bin/console
+        memorySize: 1024
+        timeout: 120
+        layers:
+            - ${bref:layer.php-83}
+            - ${bref:layer.console}
+        vpc:
+            securityGroupIds:
+                - ${self:custom.securityGroup}
+            subnetIds:
+                - subnet-0461db9cf1be1cc67
+                - subnet-02200213fe2e5874b
+                - subnet-00b7e0292352c818b
+                - subnet-08afc525ab17fb6cc
+                - subnet-0a47ca1b571466642
+                - subnet-0113a250fe8a3f8ce
+        fileSystemConfig:
+            arn: 'arn:aws:elasticfilesystem:${aws:region}:${aws:accountId}:access-point/${self:custom.efsAccessPoint}'
+            localMountPath: '${self:custom.LocalMountPath}'
+
+useDotenv: true
+
+package:
+    excludeDevDependencies: true
+    patterns:
+        - '!node_modules/**'
+        - '!.vscode/**'
+        - '!.phpunit.result.cache/**'
+        - '!tests/**'
+        - "!var/cache/**"
+        - "!var/log/**"
+        - '!*.local'
+        - '!.github/'
+        - '!docker-*.yml'
+        - '!renovate.json'
+        - '.env'

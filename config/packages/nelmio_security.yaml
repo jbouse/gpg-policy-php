@@ -43,6 +43,7 @@ nelmio_security:
             - 'self'
             script-src:
             - 'self'
+            - www.google-analytics.com
             - www.googletagmanager.com/gtag/
             img-src:
             - 'self'
