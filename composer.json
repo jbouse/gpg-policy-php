@@ -19,7 +19,7 @@
         "ext-iconv": "*",
         "bref/bref": "^2.1",
         "bref/symfony-bridge": "^1.0.0",
-        "composer/package-versions-deprecated": "1.11.99.5",
+        "composer/package-versions-deprecated": "^1.11",
         "doctrine/annotations": "^2.0",
         "doctrine/doctrine-bundle": "^2.5",
         "doctrine/doctrine-migrations-bundle": "^3.2",
