@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 #[Route(
-    '/',
+    '/legal/gpg',
     name: 'gpg_'
 )]
 class PolicyController extends AbstractController
