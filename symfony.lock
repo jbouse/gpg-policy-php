@@ -101,14 +101,8 @@
     "egulias/email-validator": {
         "version": "3.1.2"
     },
-    "friendsofphp/proxy-manager-lts": {
-        "version": "v1.0.5"
-    },
     "hollodotme/fast-cgi-client": {
         "version": "v3.1.7"
-    },
-    "laminas/laminas-code": {
-        "version": "4.5.1"
     },
     "monolog/monolog": {
         "version": "2.3.5"
@@ -298,14 +292,11 @@
             "bin/console"
         ]
     },
-    "symfony/css-selector": {
-        "version": "v6.0.3"
-    },
     "symfony/debug-bundle": {
-        "version": "6.0",
+        "version": "7.0",
         "recipe": {
             "repo": "github.com/symfony/recipes",
-            "branch": "master",
+            "branch": "main",
             "version": "5.3",
             "ref": "5aa8aa48234c8eb6dbdd7b3cd5d791485d2cec4b"
         },
@@ -497,9 +488,6 @@
     "symfony/property-info": {
         "version": "v6.0.3"
     },
-    "symfony/proxy-manager-bridge": {
-        "version": "v6.0.3"
-    },
     "symfony/psr-http-message-bridge": {
         "version": "v2.1.2"
     },
@@ -607,7 +595,7 @@
         "version": "v6.0.3"
     },
     "symfony/web-profiler-bundle": {
-        "version": "6.4",
+        "version": "7.0",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
