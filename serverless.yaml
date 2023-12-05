@@ -29,6 +29,7 @@ functions:
     website:
         description: 'GNU Privacy Guard Policy Manager'
         handler: public/index.php
+        # url: true
         memorySize: 1024
         timeout: 28 # in seconds (API Gateway has a timeout of 29 seconds)
         layers:

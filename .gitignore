@@ -17,3 +17,7 @@
 ###< symfony/phpunit-bridge ###
 
 .serverless/
+###> symfony/asset-mapper ###
+/public/assets/
+/assets/vendor
+###< symfony/asset-mapper ###

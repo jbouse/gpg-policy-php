@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 #[Route(
-    '/legal/gpg',
+    '/',
     name: 'gpg_'
 )]
 class PolicyController extends AbstractController
@@ -136,7 +136,8 @@ class PolicyController extends AbstractController
 
     #[Route(
         '/',
-        name: 'policy_index'
+        name: 'policy_index',
+        methods: ['GET', 'HEAD']
     )]
     public function index(): Response
     {
@@ -147,7 +148,8 @@ class PolicyController extends AbstractController
 
     #[Route(
         '/download/{policyId<[0-9]{8}>}', 
-        name: 'policy_download'
+        name: 'policy_download',
+        methods: ['GET', 'HEAD']
     )]
     public function policy_download(int $policyId): Response
     {
@@ -158,7 +160,8 @@ class PolicyController extends AbstractController
 
     #[Route(
         '/signature/{policyId<[0-9]{8}>}/{keyId<[0-9A-Fa-f]{8}>}',
-        name: 'signature_download'
+        name: 'signature_download',
+        methods: ['GET', 'HEAD']
     )]
     public function signature_download(int $policyId, string $keyId): Response
     {
@@ -169,7 +172,8 @@ class PolicyController extends AbstractController
 
     #[Route(
         '/policy/{policyId<[0-9]{8}>}',
-        name: 'policy_show'
+        name: 'policy_show',
+        methods: ['GET', 'HEAD']
     )]
     public function show(int $policyId): Response
     {
@@ -184,7 +188,8 @@ class PolicyController extends AbstractController
 
     #[Route(
         '/policy/{policyId<[0-9]{8}>}/{checksum<[0-9A-Fa-f]{32}>}',
-        name: 'policy_md5sum'
+        name: 'policy_md5sum',
+        methods: ['GET', 'HEAD']
     )]
     public function md5sum(int $policyId, string $checksum): Response
     {
@@ -197,7 +202,8 @@ class PolicyController extends AbstractController
 
     #[Route(
         '/policy/{policyId<[0-9]{8}>}/{checksum<[0-9A-Fa-f]{40}>}',
-        name: 'policy_sha1sum'
+        name: 'policy_sha1sum',
+        methods: ['GET', 'HEAD']
     )]
     public function sha1sum(int $policyId, string $checksum): Response
     {
@@ -210,7 +216,8 @@ class PolicyController extends AbstractController
 
     #[Route(
         '/policy/{policyId<[0-9]{8}>}/{checksum<[0-9A-Fa-f]{64}>}',
-        name: 'policy_sha256sum'
+        name: 'policy_sha256sum',
+        methods: ['GET', 'HEAD']
     )]
     public function sha256sum(int $policyId, string $checksum): Response
     {

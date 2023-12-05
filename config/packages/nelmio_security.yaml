@@ -47,7 +47,8 @@ nelmio_security:
             - www.googletagmanager.com/gtag/
             img-src:
             - 'self'
-            - 'data:'
+            - www.googletagmanager.com/a
+            - www.googletagmanager.com/td
             - www.google.com/ads/ga-audiences
             - www.google-analytics.com/collect
             connect-src:

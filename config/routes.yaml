@@ -7,3 +7,5 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+    prefix: '/legal/gpg'
+    trailing_slash_on_root: false
