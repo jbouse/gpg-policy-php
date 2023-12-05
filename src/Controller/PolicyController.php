@@ -11,9 +11,10 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
-/**
- * @Route("/", name="gpg_")
- */
+#[Route(
+    '/',
+    name: 'gpg_'
+)]
 class PolicyController extends AbstractController
 {
     protected function get_current(): int
@@ -133,9 +134,10 @@ class PolicyController extends AbstractController
         }
     }
 
-    /**
-     * @Route("/", name="policy_index")
-     */
+    #[Route(
+        '/',
+        name: 'policy_index'
+    )]
     public function index(): Response
     {
         $url = $this->generateUrl('gpg_policy_show', ['policyId' => $this->get_current()]);
@@ -143,9 +145,10 @@ class PolicyController extends AbstractController
         return new RedirectResponse($url);
     }
 
-    /**
-     * @Route("/download/{policyId<[0-9]{8}>}", name="policy_download")
-     */
+    #[Route(
+        '/download/{policyId<[0-9]{8}>}', 
+        name: 'policy_download'
+    )]
     public function policy_download(int $policyId): Response
     {
         $file = new File($this->get_policy($policyId));
@@ -153,9 +156,10 @@ class PolicyController extends AbstractController
         return $this->file($file, join('-', array('gpg', 'policy', $policyId)));
     }
 
-    /**
-     * @Route("/signature/{policyId<[0-9]{8}>}/{keyId<[0-9A-Fa-f]{8}>}", name="signature_download")
-     */
+    #[Route(
+        '/signature/{policyId<[0-9]{8}>}/{keyId<[0-9A-Fa-f]{8}>}',
+        name: 'signature_download'
+    )]
     public function signature_download(int $policyId, string $keyId): Response
     {
         $file = new File($this->get_signature($policyId, $keyId));
@@ -163,9 +167,10 @@ class PolicyController extends AbstractController
         return $this->file($file, join('-', array('gpg', 'policy', $policyId, $keyId)) . '.asc' );
     }
 
-    /**
-     * @Route("/policy/{policyId<[0-9]{8}>}", name="policy_show")
-     */
+    #[Route(
+        '/policy/{policyId<[0-9]{8}>}',
+        name: 'policy_show'
+    )]
     public function show(int $policyId): Response
     {
         $policy = $this->get_policy($policyId);
@@ -177,9 +182,10 @@ class PolicyController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/policy/{policyId<[0-9]{8}>}/{checksum<[0-9A-Fa-f]{32}>}", name="policy_md5sum")
-     */
+    #[Route(
+        '/policy/{policyId<[0-9]{8}>}/{checksum<[0-9A-Fa-f]{32}>}',
+        name: 'policy_md5sum'
+    )]
     public function md5sum(int $policyId, string $checksum): Response
     {
         $this->validate_checksum($policyId, $checksum, 'md5');
@@ -189,9 +195,10 @@ class PolicyController extends AbstractController
         return new RedirectResponse($url);
     }
 
-    /**
-     * @Route("/policy/{policyId<[0-9]{8}>}/{checksum<[0-9A-Fa-f]{40}>}", name="policy_sha1sum")
-     */
+    #[Route(
+        '/policy/{policyId<[0-9]{8}>}/{checksum<[0-9A-Fa-f]{40}>}',
+        name: 'policy_sha1sum'
+    )]
     public function sha1sum(int $policyId, string $checksum): Response
     {
         $this->validate_checksum($policyId, $checksum, 'sha1');
@@ -201,9 +208,10 @@ class PolicyController extends AbstractController
         return new RedirectResponse($url);
     }
 
-    /**
-     * @Route("/policy/{policyId<[0-9]{8}>}/{checksum<[0-9A-Fa-f]{64}>}", name="policy_sha256sum")
-     */
+    #[Route(
+        '/policy/{policyId<[0-9]{8}>}/{checksum<[0-9A-Fa-f]{64}>}',
+        name: 'policy_sha256sum'
+    )]
     public function sha256sum(int $policyId, string $checksum): Response
     {
         $this->validate_checksum($policyId, $checksum, 'sha256');
