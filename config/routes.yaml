@@ -1,3 +1,9 @@
 index:
-   path: /
-   controller: App\Controller\PolicyController::index
+    path: /
+    controller: App\Controller\PolicyController::index
+
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
