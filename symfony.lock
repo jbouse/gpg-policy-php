@@ -9,13 +9,16 @@
         "version": "1.5.4"
     },
     "bref/symfony-bridge": {
-        "version": "0.1",
+        "version": "1.0",
         "recipe": {
             "repo": "github.com/symfony/recipes-contrib",
-            "branch": "master",
+            "branch": "main",
             "version": "0.1",
-            "ref": "073e577186ef96e4f26df1f8a3dc14a48826d364"
-        }
+            "ref": "4b3369f9a34fd355e9e935c9b5e2875256cc4600"
+        },
+        "files": [
+            "serverless.yaml"
+        ]
     },
     "composer/package-versions-deprecated": {
         "version": "1.11.99.5"
