@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "bref/bref",
-            "version": "2.1.9",
+            "version": "2.1.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "98ca24e49fc9e832a0c40288144547c2b1fbe920"
+                "reference": "535ad5f035d16892dbccbb785be2333f987a81e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/98ca24e49fc9e832a0c40288144547c2b1fbe920",
-                "reference": "98ca24e49fc9e832a0c40288144547c2b1fbe920",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/535ad5f035d16892dbccbb785be2333f987a81e3",
+                "reference": "535ad5f035d16892dbccbb785be2333f987a81e3",
                 "shasum": ""
             },
             "require": {
@@ -71,7 +71,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
-                "source": "https://github.com/brefphp/bref/tree/2.1.9"
+                "source": "https://github.com/brefphp/bref/tree/2.1.13"
             },
             "funding": [
                 {
@@ -83,7 +83,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-11-23T17:04:45+00:00"
+            "time": "2024-02-01T15:29:14+00:00"
         },
         {
             "name": "bref/symfony-bridge",
@@ -6236,16 +6236,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v7.0.0",
+            "version": "v7.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "13bdb1670c7f510494e04fcb2bfa29af63db9c0d"
+                "reference": "937a195147e0c27b2759ade834169ed006d0bc74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/13bdb1670c7f510494e04fcb2bfa29af63db9c0d",
-                "reference": "13bdb1670c7f510494e04fcb2bfa29af63db9c0d",
+                "url": "https://api.github.com/repos/symfony/process/zipball/937a195147e0c27b2759ade834169ed006d0bc74",
+                "reference": "937a195147e0c27b2759ade834169ed006d0bc74",
                 "shasum": ""
             },
             "require": {
@@ -6277,7 +6277,7 @@
             "description": "Executes commands in sub-processes",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/process/tree/v7.0.0"
+                "source": "https://github.com/symfony/process/tree/v7.0.3"
             },
             "funding": [
                 {
@@ -6293,7 +6293,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-11-20T16:43:42+00:00"
+            "time": "2024-01-23T15:02:46+00:00"
         },
         {
             "name": "symfony/property-access",
@@ -10624,5 +10624,5 @@
         "ext-iconv": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
