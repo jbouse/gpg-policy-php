@@ -5982,20 +5982,20 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.30.0",
+            "version": "v1.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "fd22ab50000ef01661e2a31d850ebaa297f8e03c"
+                "reference": "85181ba99b2345b0ef10ce42ecac37612d9fd341"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fd22ab50000ef01661e2a31d850ebaa297f8e03c",
-                "reference": "fd22ab50000ef01661e2a31d850ebaa297f8e03c",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/85181ba99b2345b0ef10ce42ecac37612d9fd341",
+                "reference": "85181ba99b2345b0ef10ce42ecac37612d9fd341",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=7.2"
             },
             "provide": {
                 "ext-mbstring": "*"
@@ -6042,7 +6042,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.30.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.31.0"
             },
             "funding": [
                 {
@@ -6058,7 +6058,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-06-19T12:30:46+00:00"
+            "time": "2024-09-09T11:45:10+00:00"
         },
         {
             "name": "symfony/polyfill-php83",
@@ -7279,16 +7279,16 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v7.1.1",
+            "version": "v7.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "cf5ae136e124fc7681b34ce9fac9d5b9ae8ceee3"
+                "reference": "235535e3f84f3dfbdbde0208ede6ca75c3a489ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/cf5ae136e124fc7681b34ce9fac9d5b9ae8ceee3",
-                "reference": "cf5ae136e124fc7681b34ce9fac9d5b9ae8ceee3",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/235535e3f84f3dfbdbde0208ede6ca75c3a489ea",
+                "reference": "235535e3f84f3dfbdbde0208ede6ca75c3a489ea",
                 "shasum": ""
             },
             "require": {
@@ -7353,7 +7353,7 @@
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/translation/tree/v7.1.1"
+                "source": "https://github.com/symfony/translation/tree/v7.1.5"
             },
             "funding": [
                 {
@@ -7369,7 +7369,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-31T14:57:53+00:00"
+            "time": "2024-09-16T06:30:38+00:00"
         },
         {
             "name": "symfony/translation-contracts",
