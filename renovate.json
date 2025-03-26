@@ -1,18 +1,28 @@
 {
   "extends": [
-    "config:base",
+    "config:recommended",
     ":preserveSemverRanges",
     "schedule:nonOfficeHours"
   ],
   "packageRules": [
     {
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
       "automerge": true
     },
     {
-      "matchDepTypes": ["devDependencies"],
-      "matchPackagePatterns": ["lint", "prettier"],
-      "automerge": true
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "automerge": true,
+      "matchPackageNames": [
+        "/lint/",
+        "/prettier/"
+      ]
     }
   ],
   "lockFileMaintenance": {
